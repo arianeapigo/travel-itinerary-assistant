@@ -71,7 +71,7 @@ with header_container:
                 background-color: var(--clr-light-a0);
                 z-index: 999;
                 padding: 1rem;
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid var(--clr-surface-tonal-a60);
             }
             
             .header-fixed h1 {
@@ -79,9 +79,9 @@ with header_container:
                 color: var(--clr-dark-a0);
             }
 
-            /* set user avatar color */
+            /* user avatar color */
             .stChatMessage[data-testid="user-message"] .stChatMessageAvatar {
-            background-color: #6c757d; /* Muted gray color */
+            background-color: var(--clr-surface-tonal-a40);
             }
             
             .stChatMessage[data-testid="user-message"] .stChatMessageAvatar svg {
@@ -90,7 +90,17 @@ with header_container:
             
             /* Alternative approach using CSS selectors */
             div[data-testid="stChatMessageAvatarUser"] {
-                background-color: #6c757d;
+                background-color: var(--clr-surface-tonal-a40);
+            }
+
+            /* chatbot avatar color */
+            div[data-testid="stChatMessageAvatarAssistant"] {
+                background-color: var(--clr-primary-a0);
+            }
+
+            /* input bar border */
+            .st-emotion-cache-yd4u6l.exaa2ht1 {
+                border: 1px solid var(--clr-primary-a20);
             }
             
             /* dark mode header */
@@ -196,7 +206,7 @@ with header_container:
             [data-theme="light"] .header-fixed,
             .stApp[data-theme="light"] .header-fixed {
                 background-color: var(--clr-light-a0) !important;
-                border-bottom-color: #ddd !important;
+                border-bottom-color: var(--clr-surface-tonal-a60) !important;
             }
             
             [data-theme="light"] .header-fixed h1,
